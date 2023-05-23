@@ -4,11 +4,11 @@ import { CommonModule } from '@angular/common';
 
 import { RouterModule, Routes } from '@angular/router';
 
-import { AddContatoComponent } from './app/contato/add-contato/add-contato.component';
+import { AddContatoComponent } from './contato/add-contato/add-contato.component';
 
-import { ListContatoComponent } from './app/contato/list-contato/list-contato.component';
+import { ListContatoComponent } from './contato/list-contato/list-contato.component';
 
-import { EditContatoComponent } from './app/contato/edit-contato/edit-contato.component';
+import { EditContatoComponent } from './contato/edit-contato/edit-contato.component';
 
 
 
