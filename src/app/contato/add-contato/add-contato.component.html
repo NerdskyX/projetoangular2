@@ -28,7 +28,7 @@
 
             [ngClass]="{'text-danger': nome?.touched && nome?.invalid}"
 
-            for="nome" class="form-label">Nome</label>
+            for="nome" class="form-label">Nome:</label>
 
           <input
 
@@ -46,7 +46,7 @@
 
       <!-- LINHA 1 - CAMPO NOME -->
 
-      <!-- LINHA 2 - CAMPO IDADE -->
+      <!-- LINHA 2 - CAMPO estoque -->
 
       <div class="row">
 
@@ -54,17 +54,17 @@
 
           <label
 
-            [ngClass]="{'text-danger': idade?.touched && idade?.invalid}"
+            [ngClass]="{'text-danger': estoque?.touched && estoque?.invalid}"
 
-            for="idade" class="form-label">Idade</label>
+            for="estoque" class="form-label">Quantidade em estoque:</label>
 
           <input
 
-            [ngClass]="{'is-invalid': idade?.touched && idade?.invalid, 'is-valid': idade?.touched && idade?.valid}"
+            [ngClass]="{'is-invalid': estoque?.touched && estoque?.invalid, 'is-valid': estoque?.touched && estoque?.valid}"
 
             type="number"
 
-            formControlName="idade"
+            formControlName="estoque"
 
             class="form-control"
 
@@ -74,15 +74,15 @@
 
           <!-- Validation FeedBack -->
 
-          <div class="invalid-feedback"><sup>*</sup>Idade obrigatório</div>
+          <div class="invalid-feedback"><sup>*</sup>Quantidade em estoque obrigatório</div>
 
         </div>
 
       </div>
 
-      <!-- LINHA 2 - CAMPO IDADE -->
+      <!-- LINHA 2 - CAMPO estoque -->
 
-      <!-- LINHA 3 - CAMPO TELEFONE -->
+      <!-- LINHA 3 - CAMPO genero -->
 
       <div class="row">
 
@@ -90,17 +90,17 @@
 
           <label
 
-            [ngClass]="{'text-danger': telefone?.touched && telefone?.invalid}"
+            [ngClass]="{'text-danger': genero?.touched && genero?.invalid}"
 
-            for="telefone" class="form-label">Telefone:</label>
+            for="genero" class="form-label">Gênero:</label>
 
           <input
 
-            [ngClass]="{'is-invalid': telefone?.touched && telefone?.invalid, 'is-valid': telefone?.touched && telefone?.valid}"
+            [ngClass]="{'is-invalid': genero?.touched && genero?.invalid, 'is-valid': genero?.touched && genero?.valid}"
 
             type="text"
 
-            formControlName="telefone"
+            formControlName="genero"
 
             class="form-control"
 
@@ -116,7 +116,7 @@
 
       </div>
 
-      <!-- LINHA 3 - CAMPO TELEFONE -->
+      <!-- LINHA 3 - CAMPO genero -->
 
       <!-- BOTÕES DO FORMULÁRIO -->
 
@@ -130,7 +130,7 @@
 
         <button type="submit" class="btn btn-success mx-2" [disabled]="!contatoForm.valid">
 
-          Adicionar Contato
+          Adicionar Música
 
         </button>
 

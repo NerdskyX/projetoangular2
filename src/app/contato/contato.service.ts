@@ -40,9 +40,9 @@ export class ContatoService {
 
       nome: contato.nome,
 
-      telefone: contato.telefone,
+      genero: contato.genero,
 
-      idade: contato.idade,
+      estoque: contato.estoque,
 
     });
 
@@ -80,9 +80,9 @@ export class ContatoService {
 
       nome: contato.nome,
 
-      telefone: contato.telefone,
+      genero: contato.genero,
 
-      idade: contato.idade,
+      estoque: contato.estoque,
 
     });
 

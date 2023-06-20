@@ -56,9 +56,9 @@ export class EditContatoComponent implements OnInit{
 
       nome: new FormControl('', Validators.required),
 
-      idade: new FormControl('', Validators.required),
+      estoque: new FormControl('', Validators.required),
 
-      telefone: new FormControl('', [Validators.required,  Validators.pattern('^[0-9]+$')])
+      genero: new FormControl('', Validators.required)
 
     });
 
@@ -114,17 +114,17 @@ export class EditContatoComponent implements OnInit{
 
 
 
-  get idade(){
+  get estoque(){
 
-    return this.contatoForm.get('idade');
+    return this.contatoForm.get('estoque');
 
   }
 
 
 
-  get telefone(){
+  get genero(){
 
-    return this.contatoForm.get('telefone');
+    return this.contatoForm.get('genero');
 
   }
 

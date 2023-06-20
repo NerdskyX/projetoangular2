@@ -4,8 +4,8 @@ export interface Contato {
 
   nome: String;
 
-  idade: Number;
+  estoque: Number;
 
-  telefone: String;
+  genero: String;
 
 }
