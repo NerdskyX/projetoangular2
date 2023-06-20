@@ -30,18 +30,4 @@ export class AppComponent {
 
   }
 
-
-
-  ngOnInit() {
-
-    this.db.list("teste").push("test")
-
-    .then( result =>
-
-      console.log(result.key)
-
-    );
-
-  }
-
 }
