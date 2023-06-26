@@ -22,8 +22,8 @@ export class ContatoService {
     this.listaContatosRef.push(
       {
         nome: contato.nome,
-        idade: contato.idade,
-        telefone: contato.telefone
+        ano: contato.ano,
+        vendidos: contato.vendidos
       }
     );
   }
@@ -42,8 +42,8 @@ export class ContatoService {
   updateContato(contato: Contato){
     this.contatoRef.update({
       nome: contato.nome,
-      idade: contato.idade,
-      telefone: contato.telefone
+      ano: contato.ano,
+      vendidos: contato.vendidos
     });
   }
 

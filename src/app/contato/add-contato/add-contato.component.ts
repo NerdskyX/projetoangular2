@@ -22,8 +22,8 @@ export class AddContatoComponent implements OnInit {
   createForm(){
     return this.fb.group({
       nome: new FormControl('', Validators.required),
-      idade: new FormControl('', Validators.required),
-      telefone: new FormControl('', [Validators.required, Validators.pattern('^[0-9]+$')])
+      ano: new FormControl('', Validators.required),
+      vendidos: new FormControl('', [Validators.required, Validators.pattern('^[0-9]+$')])
     });
   }
 
@@ -46,11 +46,11 @@ export class AddContatoComponent implements OnInit {
     return this.contatoForm.get('nome');
   }
 
-  get idade(){
-    return this.contatoForm.get('idade');
+  get ano(){
+    return this.contatoForm.get('ano');
   }
 
-  get telefone(){
-    return this.contatoForm.get('telefone');
+  get vendidos(){
+    return this.contatoForm.get('vendidos');
   }
 }

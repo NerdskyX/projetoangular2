@@ -1,5 +1,5 @@
 <div class="pt-3 pb-2 border-bottom">
-  <h2>Adicionar Contato</h2>
+  <h2>Adicionar Música</h2>
 </div>
 <form [formGroup]="contatoForm" (ngSubmit)="submitForm()" novalidate>
   <div class="row">
@@ -15,33 +15,33 @@
           <div class="invalid-feedback"><sup>*</sup>Nome obrigatório</div>
         </div>
       </div>
-      <!-- IDADE -->
+      <!-- ano -->
       <div class="row">
         <div class="col-md-12 mb-3">
           <label
-          [ngClass]="{'text-danger': idade?.touched && idade?.invalid}"
-          for="idade" class="form-label">Idade</label>
+          [ngClass]="{'text-danger': ano?.touched && ano?.invalid}"
+          for="ano" class="form-label">Ano</label>
         <input
-          [ngClass]="{'is-invalid': idade?.touched && idade?.invalid, 'is-valid': idade?.touched && idade?.valid}"
+          [ngClass]="{'is-invalid': ano?.touched && ano?.invalid, 'is-valid': ano?.touched && ano?.valid}"
           type="number"
-          formControlName="idade"
+          formControlName="ano"
           class="form-control"
           required
         />
         <!-- Validation FeedBack -->
-        <div class="invalid-feedback"><sup>*</sup>Idade obrigatório</div>
+        <div class="invalid-feedback"><sup>*</sup>Ano obrigatório</div>
         </div>
       </div>
-      <!-- TELEFONE -->
+      <!-- vendidos -->
       <div class="row">
         <div class="col-md-12 mb-3">
           <label
-          [ngClass]="{'text-danger': telefone?.touched && telefone?.invalid}"
-          for="telefone" class="form-label">Telefone:</label>
+          [ngClass]="{'text-danger': vendidos?.touched && vendidos?.invalid}"
+          for="vendidos" class="form-label">Vendidos:</label>
         <input
-          [ngClass]="{'is-invalid': telefone?.touched && telefone?.invalid, 'is-valid': telefone?.touched && telefone?.valid}"
+          [ngClass]="{'is-invalid': vendidos?.touched && vendidos?.invalid, 'is-valid': vendidos?.touched && vendidos?.valid}"
           type="text"
-          formControlName="telefone"
+          formControlName="vendidos"
           class="form-control"
           required
         />
@@ -52,7 +52,7 @@
       <div class="form-group text-end">
         <button type="button" class="btn btn-secondary mx-2" (click)="resetForm()">Limpar</button>
         <button type="submit" class="btn btn-success mx-2" [disabled]="!contatoForm.valid">
-          Adicionar Contato</button>
+          Adicionar Música</button>
       </div>
     </div>
   </div>

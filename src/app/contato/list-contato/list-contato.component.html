@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-between
             flex-wrap flex-md-nowrap align-items-center
             pt-3 pb-2 mb-3 border-bottom">
-  <h2>Lista de Contatos</h2>
+  <h2>Lista de Músicas</h2>
 </div>
 <div class="mx-auto">
   <!-- LOADER -->
@@ -10,8 +10,8 @@
   </div>
   <!-- CONTEUDO LISTA VAZIA -->
   <div class="text-center" *ngIf="listaVazia">
-    <p>Nenhum contato adicionado ainda.</p>
-    <a routerLink="/add-contato" class="btn btn-success">Adicionar Contato</a>
+    <p>Nenhuma Música adicionada ainda.</p>
+    <a routerLink="/add-contato" class="btn btn-success">Adicionar Música</a>
   </div>
   <!-- CONTEUDO NORMAL -->
   <div class="table-responsive" *ngIf="!listaVazia">
@@ -19,8 +19,8 @@
       <thead>
         <th scope="col">#</th>
         <th scope="col">Nome</th>
-        <th scope="col">Idade</th>
-        <th scope="col">Telefone</th>
+        <th scope="col">Ano</th>
+        <th scope="col">Vendidos</th>
         <th scope="col" class="text-center">Editar</th>
       </thead>
       <tbody>
@@ -28,8 +28,8 @@
                     let i = index">
           <th scope="row">{{i+1}}</th>
           <td>{{contato.nome}}</td>
-          <td>{{contato.idade}}</td>
-          <td>{{contato.telefone}}</td>
+          <td>{{contato.ano}}</td>
+          <td>{{contato.vendidos}}</td>
           <td class="text-center action-block">
             <span
               class="btn btn-outline-primary btn-sm"
