@@ -8,6 +8,7 @@ import { AngularFireDatabase } from '@angular/fire/compat/database';
 })
 export class AppComponent {
   title = 'crud-angular-firebase';
+logo: any;
 
   //DI - Dependecy Injection
   constructor(private db: AngularFireDatabase){}
