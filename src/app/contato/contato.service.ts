@@ -1,103 +1,56 @@
 import { Injectable } from '@angular/core';
 
-import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/compat/database';
+//ANGULAR FIRE
+import { AngularFireList, AngularFireObject, AngularFireDatabase } from '@angular/fire/compat/database';
 
 import { Contato } from './contato';
 
-
-
 @Injectable({
-
   providedIn: 'root'
-
 })
-
 export class ContatoService {
-
   listaContatosRef: AngularFireList<Contato>;
-
   contatoRef: AngularFireObject<Contato>;
 
-
-
   constructor(private db: AngularFireDatabase) {
-
-    //inicialização dos caminhos ao firebase
-
-    this.listaContatosRef = this.db.list('list-contatos');
-
-    this.contatoRef = this.db.object('list-contatos/' + 0);
-
+    this.listaContatosRef = this.db.list('list-contato');
+    this.contatoRef = this.db.object('list-contato/' + 0);
   }
 
-
-
-  // Inserir Contato
-
-  insertContato(contato: Contato) {
-
-    this.listaContatosRef.push({
-
-      nome: contato.nome,
-
-      genero: contato.genero,
-
-      estoque: contato.estoque,
-
-    });
-
+  //CREATE RUD
+  insertContato(contato: Contato){
+    this.listaContatosRef.push(
+      {
+        nome: contato.nome,
+        idade: contato.idade,
+        telefone: contato.telefone
+      }
+    );
   }
 
-
-
-  // Buscar um único Objeto Contato pelo seu ID
-
+  //C Read UD
   getContatoById(id: string): AngularFireObject<Contato> {
-
-    this.contatoRef = this.db.object('list-contatos/' + id);
-
+    this.contatoRef = this.db.object('list-contato/'+ id);
     return this.contatoRef;
-
   }
-
-
-
-  // Fetch Students List
 
   getContatoList(): AngularFireList<Contato> {
-
     return this.listaContatosRef;
-
   }
 
-
-
-  // Update Student Object
-
-  updateContato(contato: Contato) {
-
+  //CR Update D
+  updateContato(contato: Contato){
     this.contatoRef.update({
-
       nome: contato.nome,
-
-      genero: contato.genero,
-
-      estoque: contato.estoque,
-
+      idade: contato.idade,
+      telefone: contato.telefone
     });
-
   }
 
-
-
-  // Delete Student Object
-
-  deleteContato(id: string) {
-
-    this.contatoRef = this.db.object('list-contatos/' + id);
-
+  //CRU Delete
+  deleteContato(id: String) {
+    this.contatoRef = this.db.object('list-contato/' + id);
     this.contatoRef.remove();
-
   }
 
 }

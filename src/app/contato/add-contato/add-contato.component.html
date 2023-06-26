@@ -1,149 +1,59 @@
-<!-- HEADER -->
-
-<div class="pt-3 pb-2 mb-3 border-bottom">
-
-  <h2 class="h2">Adicionar Musica</h2>
-
+<div class="pt-3 pb-2 border-bottom">
+  <h2>Adicionar Contato</h2>
 </div>
-
-<!-- HEADER -->
-
-<!-- FORMULÁRIO -->
-
 <form [formGroup]="contatoForm" (ngSubmit)="submitForm()" novalidate>
-
-  <!-- ADAPTA O TAMANHO DO FORMULÁRIO DE ACORDO COM A TELA-->
-
   <div class="row">
-
     <div class="col-lg-6 col-md-8 col-sm-12">
-
-      <!-- LINHA 1 - CAMPO NOME -->
-
+      <!-- NOME -->
       <div class="row">
-
         <div class="col-md-12 mb-3">
-
-          <label
-
-            [ngClass]="{'text-danger': nome?.touched && nome?.invalid}"
-
-            for="nome" class="form-label">Nome:</label>
-
+          <label [ngClass]="{'text-danger': nome?.touched && nome?.invalid}"
+          for="nome" ckass="form-label">Nome</label>
           <input
-
-            [ngClass]="{'is-invalid': nome?.touched && nome?.invalid, 'is-valid': nome?.touched && nome?.valid}"
-
-            type="text" id="nome" class="form-control" formControlName="nome" required/>
-
-          <!-- errors-->
-
+          [ngClass]="{'is-invalid': nome?.touched && nome?.invalid, 'is-valid': nome?.touched && nome?.valid}"
+          type="text" id="nome" class="form-control" formControlName="nome" required>
           <div class="invalid-feedback"><sup>*</sup>Nome obrigatório</div>
-
         </div>
-
       </div>
-
-      <!-- LINHA 1 - CAMPO NOME -->
-
-      <!-- LINHA 2 - CAMPO estoque -->
-
+      <!-- IDADE -->
       <div class="row">
-
         <div class="col-md-12 mb-3">
-
           <label
-
-            [ngClass]="{'text-danger': estoque?.touched && estoque?.invalid}"
-
-            for="estoque" class="form-label">Quantidade em estoque:</label>
-
-          <input
-
-            [ngClass]="{'is-invalid': estoque?.touched && estoque?.invalid, 'is-valid': estoque?.touched && estoque?.valid}"
-
-            type="number"
-
-            formControlName="estoque"
-
-            class="form-control"
-
-            required
-
-          />
-
-          <!-- Validation FeedBack -->
-
-          <div class="invalid-feedback"><sup>*</sup>Quantidade em estoque obrigatório</div>
-
+          [ngClass]="{'text-danger': idade?.touched && idade?.invalid}"
+          for="idade" class="form-label">Idade</label>
+        <input
+          [ngClass]="{'is-invalid': idade?.touched && idade?.invalid, 'is-valid': idade?.touched && idade?.valid}"
+          type="number"
+          formControlName="idade"
+          class="form-control"
+          required
+        />
+        <!-- Validation FeedBack -->
+        <div class="invalid-feedback"><sup>*</sup>Idade obrigatório</div>
         </div>
-
       </div>
-
-      <!-- LINHA 2 - CAMPO estoque -->
-
-      <!-- LINHA 3 - CAMPO genero -->
-
+      <!-- TELEFONE -->
       <div class="row">
-
         <div class="col-md-12 mb-3">
-
           <label
-
-            [ngClass]="{'text-danger': genero?.touched && genero?.invalid}"
-
-            for="genero" class="form-label">Gênero:</label>
-
-          <input
-
-            [ngClass]="{'is-invalid': genero?.touched && genero?.invalid, 'is-valid': genero?.touched && genero?.valid}"
-
-            type="text"
-
-            formControlName="genero"
-
-            class="form-control"
-
-            required
-
-          />
-
-          <!-- Validation FeedBack -->
-
-          <div class="invalid-feedback"><sup>*</sup>Informe apenas números</div>
-
+          [ngClass]="{'text-danger': telefone?.touched && telefone?.invalid}"
+          for="telefone" class="form-label">Telefone:</label>
+        <input
+          [ngClass]="{'is-invalid': telefone?.touched && telefone?.invalid, 'is-valid': telefone?.touched && telefone?.valid}"
+          type="text"
+          formControlName="telefone"
+          class="form-control"
+          required
+        />
+        <!-- Validation FeedBack -->
+        <div class="invalid-feedback"><sup>*</sup>Informe apenas números</div>
         </div>
-
       </div>
-
-      <!-- LINHA 3 - CAMPO genero -->
-
-      <!-- BOTÕES DO FORMULÁRIO -->
-
       <div class="form-group text-end">
-
-        <button type="button" class="btn btn-secondary mx-2" (click)="resetForm()">
-
-          Limpar
-
-        </button>
-
+        <button type="button" class="btn btn-secondary mx-2" (click)="resetForm()">Limpar</button>
         <button type="submit" class="btn btn-success mx-2" [disabled]="!contatoForm.valid">
-
-          Adicionar Música
-
-        </button>
-
+          Adicionar Contato</button>
       </div>
-
-      <!-- BOTÕES DO FORMULÁRIO -->
-
     </div>
-
   </div>
-
- <!-- ADAPTA O TAMANHO DO FORMULÁRIO DE ACORDO COM A TELA-->
-
 </form>
-
-<!-- FORMULÁRIO -->

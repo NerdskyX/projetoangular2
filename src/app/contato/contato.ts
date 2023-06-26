@@ -1,11 +1,6 @@
 export interface Contato {
-
-  $key?: string;
-
+  $key?: String;
   nome: String;
-
-  estoque: Number;
-
-  genero: String;
-
+  idade: Number;
+  telefone: String;
 }

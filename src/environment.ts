@@ -1,17 +1,12 @@
 export const environment = {
-
   production: false,
-
   firebaseConfig: {
-
-  apiKey: "AIzaSyB_um8dlx7O9n3Um9KKPqS_99gpFipeTqE",
-  authDomain: "crud-angular-firebase-33150.firebaseapp.com",
-  databaseURL: "https://crud-angular-firebase-33150-default-rtdb.firebaseio.com",
-  projectId: "crud-angular-firebase-33150",
-  storageBucket: "crud-angular-firebase-33150.appspot.com",
-  messagingSenderId: "615901931209",
-  appId: "1:615901931209:web:0c00350edb135889cd0f18"
-
+  apiKey: "AIzaSyBCs1ev2_i8No_0uVIsZVzvdBY7J5ahcKI",
+  authDomain: "crud-angular-projeto2.firebaseapp.com",
+  databaseURL: "https://crud-angular-projeto2-default-rtdb.firebaseio.com",
+  projectId: "crud-angular-projeto2",
+  storageBucket: "crud-angular-projeto2.appspot.com",
+  messagingSenderId: "403078195903",
+  appId: "1:403078195903:web:748c3bea0d0401c925740a"
   }
-
 };
